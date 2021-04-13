@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      INPUT
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,5 +13,27 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <h2>Masukkan Data</h2>
+  Judul
+  <ion-input [(ngModel)]="judul"></ion-input>
+  <br/>
+  Isi
+  <ion-input [(ngModel)]="isi"></ion-input>
+  <br/>
+  
+  Tanggal
+  <input type="date" [(ngModel)]="tanggal"/>
+  <br/>
+  Nilai
+  <ion-input [(ngModel)]="nilai"></ion-input>
+  <br/>
+
+  Gambar 
+  <ion-fab-button  (click)="addPhotoToGallery()">
+    <ion-icon name="camera"></ion-icon>
+  </ion-fab-button>
+
+  <ion-button (click)="simpan()"> Simpan </ion-button>
 </ion-content>
+
+
